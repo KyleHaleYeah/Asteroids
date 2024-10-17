@@ -3,7 +3,7 @@ from player import Player
 import pygame
 
 def main():
-    pygame.init
+    pygame.init()
     print("Starting asteroids!")
     print(f"Screen width: {SCREEN_WIDTH}")
     print(f"Screen height: {SCREEN_HEIGHT}")
@@ -17,6 +17,7 @@ def main():
             if event.type == pygame.QUIT:
                 return
 
+        player.update(dt)
         screen.fill((0, 0, 0))
         player.draw(screen)
         pygame.display.flip()
